@@ -3,7 +3,7 @@
   "name": "angular-strap-daterange",
   "description": "Checks daterange of two bootstrap datepicker instances.",
   "keywords": ["angular-strap", "datepicker", "compare", "date range"],
-  "version": "1.1.0",
+  "version": "1.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/SuperRunt/angular-strap-daterange"

@@ -15,6 +15,9 @@
                 });
 
                 var updateDateSettings = function ( newVal ) {
+                
+                	if ( !newVal ) { return; }
+                	
                     var _newFromDate;
 
                     if (typeof newVal === "string" && newVal.match(/^[0-9]+$/) != null) {
