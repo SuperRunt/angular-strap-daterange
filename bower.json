@@ -9,6 +9,10 @@
     "url": "git://github.com/SuperRunt/angular-strap-daterange"
   },
   "main": "angular-strap-daterange.js",
+  "ignore": [
+    ".html",
+    ".md"
+  ],
   "dependencies": {
     "angular": "~1.2.12",
     "angular-strap": "~2.0.0"
