@@ -8,7 +8,6 @@
     "type": "git",
     "url": "git://github.com/SuperRunt/angular-strap-daterange"
   },
-  "main": "angular-strap-daterange.js",
   "ignore": [
     ".html",
     ".md"
