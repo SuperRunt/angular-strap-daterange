@@ -13,3 +13,7 @@ Easily implemented by adding laterthan="{{fromDate}}" to the to-date form field 
 <input type="email" name="email" class="form-control" ng-model="person.EmailAddress" placeholder="Email" required oninvalid="this.setCustomValidity('Email is required, and must match.');">
 <input type="email" class="form-control" ng-model="emailConfirm" placeholder="Email Confirm" equals="{{person.EmailAddress}}" oninvalid="this.setCustomValidity('Email is required, and must match.');">
 ```
+Bower install:
+```
+bower install angular-strap-daterange
+```
