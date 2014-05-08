@@ -1,4 +1,5 @@
 	<style>
+        /* webkit only. I was lazy.... */
 		@-webkit-keyframes border-pulsate {
             0%   { border-color: rgba(246, 89, 19, 0); -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);}
             50% { border-color: rgba(246, 89, 19, 1); -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(246, 89, 19, 0.6); }
@@ -21,6 +22,5 @@
 
         <div class="form-group">
             <label class="control-label" > Check Out: </label>
-            <!-- {{toMinDate}} is a scope var that is set on first load (used if you need to add to the from date) -->
-            <input type="text" class="form-control date" readonly="true" ng-model="searchParams.toDate" data-min-date="{{toMinDate}}" laterthan="{{searchParams.fromDate}}" bs-datepicker required />
+            <input type="text" class="form-control date" readonly="true" ng-model="searchParams.toDate" data-min-date="{{toMinDate}}" laterthan="{{searchParams.fromDate}}" changedclass="changeAlert" bs-datepicker required />
         </div>

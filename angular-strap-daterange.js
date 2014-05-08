@@ -10,7 +10,9 @@
                 if(!ngModel) { return; }
 
                 attrs.$observe('laterthan', function (val) {
-                    elem.removeClass("changeAlert");
+                    if (attrs.changedclass) {
+                        elem.removeClass(attrs.changedclass);
+                    }
                     this.updateDateSettings(val);
                 });
 
@@ -46,7 +48,9 @@
                     ngModel.$render = function() {
                         ngModel.$setViewValue(_newToMinDate);
                         elem.val(this.convertToPrettyDate(_newToMinDate));
-                        elem.addClass("changeAlert");
+                        if (attrs.changedclass) {
+                            elem.addClass(attrs.changedclass);
+                        }
                     };
 
                     ngModel.$modelValue = _newToMinDate;

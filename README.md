@@ -7,12 +7,13 @@ This directive observes the from-date. The datepicker minDate will always be set
 If the from-date gets set to after the to-date, the to-date gets updated to from-date + 1 day. If the to-date is updated
 by the directive, the field 'flashes' to alert the user to this update.
 <br><br>
-Easily implemented by adding laterthan="{{fromDate}}" to the to-date form field together with the bs-datepicker directive:
+Easily implemented by adding laterthan="{{fromDate}}" to the to-date form field together with the bs-datepicker directive.
+If you would like to add a class to the form field that gets automatically updated, you can add it with
+changedclass="<classname>". I like to pulse the border in a different color. You can see an example of that in the example.html.
 
 ```
 <input type="email" name="email" class="form-control" ng-model="person.EmailAddress" placeholder="Email" required oninvalid="this.setCustomValidity('Email is required, and must match.');">
-<input type="email" class="form-control" ng-model="emailConfirm" placeholder="Email Confirm" equals="{{person.EmailAddress}}" oninvalid="this.setCustomValidity('Email is required, and must match.');">
-```
+<input type="text" class="form-control date" readonly="true" ng-model="searchParams.toDate" data-min-date="{{toMinDate}}" laterthan="{{searchParams.fromDate}}" changedclass="changeAlert" bs-datepicker required />```
 Bower install:
 ```
 bower install angular-strap-daterange
