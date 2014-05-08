@@ -13,7 +13,9 @@ changedclass="<classname>". I like to pulse the border in a different color. You
 
 ```
 <input type="email" name="email" class="form-control" ng-model="person.EmailAddress" placeholder="Email" required oninvalid="this.setCustomValidity('Email is required, and must match.');">
-<input type="text" class="form-control date" readonly="true" ng-model="searchParams.toDate" data-min-date="{{toMinDate}}" laterthan="{{searchParams.fromDate}}" changedclass="changeAlert" bs-datepicker required />```
+<input type="text" class="form-control date" readonly="true" ng-model="searchParams.toDate" data-min-date="{{toMinDate}}" laterthan="{{searchParams.fromDate}}" changedclass="changeAlert" bs-datepicker required />
+```
+
 Bower install:
 ```
 bower install angular-strap-daterange
