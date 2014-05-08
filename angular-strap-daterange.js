@@ -11,10 +11,17 @@
 
                 attrs.$observe('laterthan', function (val) {
                     elem.removeClass("changeAlert");
-                    updateDateSettings(val);
+                    this.updateDateSettings(val);
                 });
 
-                var updateDateSettings = function ( newVal ) {
+                // This assumes dates are in MM/DD/YYYY format. Tweak as necessary.
+                this.convertToPrettyDate = function ( date ) {
+                    var _conv = new Date(date);
+                    var _date = _conv.getDate().toString().length > 1 ? _conv.getDate() : "0"+_conv.getDate();
+                    return (_conv.getMonth()+1) + "/" + _date + "/" + _conv.getFullYear();
+                };
+
+                this.updateDateSettings = function ( newVal ) {
                 
                 	if ( !newVal ) { return; }
                 	
@@ -38,7 +45,7 @@
 
                     ngModel.$render = function() {
                         ngModel.$setViewValue(_newToMinDate);
-                        elem.val(OBI.convertToPrettyDate(_newToMinDate));
+                        elem.val(this.convertToPrettyDate(_newToMinDate));
                         elem.addClass("changeAlert");
                     };
 
