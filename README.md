@@ -12,7 +12,7 @@ If you would like to add a class to the form field that gets automatically updat
 changedclass="<classname>". I like to pulse the border in a different color. You can see an example of that in the example.html.
 
 ```
-<input type="email" name="email" class="form-control" ng-model="person.EmailAddress" placeholder="Email" required oninvalid="this.setCustomValidity('Email is required, and must match.');">
+<input type="text" class="form-control date" readonly="true" ng-model="searchParams.fromDate" data-min-date="today" bs-datepicker required />
 <input type="text" class="form-control date" readonly="true" ng-model="searchParams.toDate" data-min-date="{{toMinDate}}" laterthan="{{searchParams.fromDate}}" changedclass="changeAlert" bs-datepicker required />
 ```
 
